@@ -6,9 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.centraltec.dsvendas.dto.SaleDTO;
 import com.centraltec.dsvendas.dto.SellerDTO;
-import com.centraltec.dsvendas.repository.SaleRepository;
 import com.centraltec.dsvendas.repository.SellerRepository;
 
 @Service

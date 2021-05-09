@@ -3,7 +3,6 @@ package com.centraltec.dsvendas.dto;
 import java.time.LocalDate;
 
 import com.centraltec.dsvendas.entity.Sale;
-import com.centraltec.dsvendas.entity.Seller;
 
 public class SaleDTO {
 
