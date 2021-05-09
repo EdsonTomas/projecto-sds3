@@ -13,18 +13,19 @@ public class SaleDTO {
 	private Double amount;
 	private LocalDate date;
 
-	private Seller seller;
+	private SellerDTO sellerDto;
 	
 	public SaleDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date) {
+	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
+		this.sellerDto = seller;
 	}
 
 	public SaleDTO(Sale entity) {
@@ -33,7 +34,7 @@ public class SaleDTO {
 		deals = entity.getDeals();
 		amount = entity.getAmount();
 		date = entity.getDate();
-		seller = entity.getSeller();
+		sellerDto = new SellerDTO(entity.getSeller());
 	}
 
 	public Long getId() {
@@ -76,13 +77,14 @@ public class SaleDTO {
 		this.date = date;
 	}
 
-	public Seller getSeller() {
-		return seller;
+	public SellerDTO getSellerDto() {
+		return sellerDto;
 	}
 
-	public void setSeller(Seller seller) {
-		this.seller = seller;
+	public void setSellerDto(SellerDTO sellerDto) {
+		this.sellerDto = sellerDto;
 	}
+
 	
 	
 

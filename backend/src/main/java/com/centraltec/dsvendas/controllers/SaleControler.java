@@ -1,8 +1,8 @@
 package com.centraltec.dsvendas.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +19,8 @@ public class SaleControler {
 	private SaleService service;
 	
 	@GetMapping
-	public ResponseEntity<List<SaleDTO>> findAll(){
-		return ResponseEntity.ok(service.findAll());
+	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable){
+		return ResponseEntity.ok(service.findAll(pageable));
 	}
 	
 	
