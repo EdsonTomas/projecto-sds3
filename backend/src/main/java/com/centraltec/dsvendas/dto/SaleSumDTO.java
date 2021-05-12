@@ -3,7 +3,7 @@ package com.centraltec.dsvendas.dto;
 import com.centraltec.dsvendas.entity.Seller;
 
 public class SaleSumDTO {
-	private String name;
+	private String sellerName;
 	private Double sum;
 	
 	public SaleSumDTO() {
@@ -11,16 +11,16 @@ public class SaleSumDTO {
 	}
 	
 	public SaleSumDTO(Seller seller, Double sum) {
-		this.name 	= seller.getName();
+		this.sellerName 	= seller.getName();
 		this.sum	= sum;
 	}
 
 	public String getName() {
-		return name;
+		return sellerName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.sellerName = name;
 	}
 
 	public Double getSum() {
